@@ -1,13 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-
 namespace AssemblyCSharp
 {
-	public class WorldController : MonoBehaviour
+	public class EnemyAIController : MonoBehaviour
 	{
-		public GameObject Player;
 		public GameObject[] enemies;
-		World world = new World();
 		// Use this for initialization
 		void Start ()
 		{
@@ -17,11 +14,7 @@ namespace AssemblyCSharp
 		// Update is called once per frame
 		void Update ()
 		{
-		
-		}
-		public GameObject[] getEnemies()
-		{
-			return enemies;
+			
 		}
 	}
 }
