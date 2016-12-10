@@ -22,13 +22,13 @@ namespace AssemblyCSharp
 		/// <param name="price">Price.</param>
 		public void add_item(string name, int quantity, int price = 0)
 		{
-			if (items.TryGetValue(name))
+			if (items.ContainsKey(name))
 			{
 				items [name].quantity += quantity;
 			}
 			else
 			{
-				items.Add (name, Item (name, quantity, price));
+				items.Add (name, new Item (name, quantity, price));
 			}
 		
 		}

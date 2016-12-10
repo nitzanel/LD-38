@@ -12,9 +12,9 @@ namespace AssemblyCSharp
 		/// <param name="price">Price.</param>
 		public Item (string name, int quantity, int price)
 		{
-			this->name = name;
-			this->quantity = quantity;
-			this->price = price;
+			this.name = name;
+			this.quantity = quantity;
+			this.price = price;
 		}
 		// name of the item
 		public string name {get; set;}
