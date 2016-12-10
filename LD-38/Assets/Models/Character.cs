@@ -30,12 +30,16 @@ namespace AssemblyCSharp
 		/// <param name="quantity">Quantity.</param>
 		public void takeItem(Inventory giver_inventory, string name, int quantity)
 		{
-			if (giver_inventory.items.ContainsKey (name)) {
+			if (giver_inventory.items.ContainsKey (name)) 
+			{
 				int giver_quantity = giver_inventory.items [name].quantity;
-				if (giver_quantity >= quantity) {
+				if (giver_quantity >= quantity)
+				{
 					giver_inventory.addItem (name, -quantity);
 					this.inventory.addItem (name, quantity);
-				} else {
+				}
+				else
+				{
 					giver_inventory.addItem (name, -giver_quantity);
 					this.inventory.addItem (name, giver_quantity);
 				}
