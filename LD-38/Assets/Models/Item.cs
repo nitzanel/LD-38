@@ -23,6 +23,8 @@ namespace AssemblyCSharp
 		// price for 1 piece of the item
 		int price {get; set;}
 
+		// SOME NEW INFORMATION
+
 	}
 }
 
