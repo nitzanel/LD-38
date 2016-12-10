@@ -3,14 +3,23 @@ using System.Collections.Generic;
 
 namespace AssemblyCSharp
 {
+	/// <summary>
+	/// Inventory.
+	/// </summary>
 	public class Inventory
 	{
+		/// <summary>
+		/// Initializes a new instance of the <see cref="AssemblyCSharp.Inventory"/> class.
+		/// </summary>
 		public Inventory ()
 		{
 			// the dictionary of items
-			items = new Dictionary<string,Item>();
+			this.items = new Dictionary<string,Item>();
 		
 		}
+		/// <summary>
+		/// The items.
+		/// </summary>
 		public Dictionary<string,Item> items;
 
 		/// <summary>
@@ -20,19 +29,27 @@ namespace AssemblyCSharp
 		/// <param name="name">Name.</param>
 		/// <param name="quantity">Quantity.</param>
 		/// <param name="price">Price.</param>
-		public void add_item(string name, int quantity, int price = 0)
+		public void addItem(string name, int quantity, int price = 0)
 		{
-			if (items.ContainsKey(name))
+			if (this.items.ContainsKey(name))
 			{
-				items [name].quantity += quantity;
+				this.items [name].quantity += quantity;
 			}
 			else
 			{
-				items.Add (name, new Item (name, quantity, price));
+				this.items.Add (name, new Item (name, quantity, price));
 			}
 		
 		}
 
+		/// <summary>
+		/// Adds the item.
+		/// </summary>
+		/// <param name="item">Item.</param>
+		public void addItem(Item item)
+		{
+			this.addItem (item.name, item.quantity, item.price);
+		}
 
 
 	}

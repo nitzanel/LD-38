@@ -2,8 +2,14 @@
 using UnityEngine;
 namespace AssemblyCSharp
 {
+	/// <summary>
+	/// Character.
+	/// </summary>
 	public class Character
 	{
+		/// <summary>
+		/// Initializes a new instance of the <see cref="AssemblyCSharp.Character"/> class.
+		/// </summary>
 		public Character ()
 		{
 			this.inventory = new Inventory ();
@@ -11,7 +17,13 @@ namespace AssemblyCSharp
 		
 		}
 
+		/// <summary>
+		/// The inventory.
+		/// </summary>
 		public Inventory inventory;
+		/// <summary>
+		/// The money.
+		/// </summary>
 		public int money;
 
 		/// <summary>
@@ -44,17 +56,7 @@ namespace AssemblyCSharp
 		/// <param name="item">Item.</param>
 		public void takeItem(Inventory giver_inventory, Item item)
 		{
-			int giver_quantity = giver_inventory.items [item.name].quantity;
-			if (giver_quantity >= item.quantity)
-			{
-				giver_inventory.addItem (item.name, -item.quantity);
-				this.inventory.addItem (item.name, item.quantity);
-			}
-			else
-			{
-				giver_inventory.addItem (item.name, -giver_quantity);
-				this.inventory.addItem (item.name, giver_quantity);
-			}
+			takeItem (giver_inventory, item.name, item.quantity);
 		}
 
 

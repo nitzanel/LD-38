@@ -2,6 +2,9 @@
 
 namespace AssemblyCSharp
 {
+	/// <summary>
+	/// Item.
+	/// </summary>
 	public class Item
 	{	
 		/// <summary>
