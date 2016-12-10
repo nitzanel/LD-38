@@ -17,6 +17,10 @@ namespace AssemblyCSharp
 		int quantity;
 		// price for 1 piece of the item
 		int price;
+		public void setPrice(int price)
+		{
+			this.price = price;
+		}
 	}
 }
 
