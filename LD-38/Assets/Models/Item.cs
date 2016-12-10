@@ -17,20 +17,12 @@ namespace AssemblyCSharp
 			this->price = price;
 		}
 		// name of the item
-		string name;
+		string name {get; set;}
 		// quantity of the item
-		int quantity;
+		int quantity {get; set; }
 		// price for 1 piece of the item
-		int price;
+		int price {get; set;}
 
-		/// <summary>
-		/// Sets the price.
-		/// </summary>
-		/// <param name="price">Price.</param>
-		public void setPrice(int price)
-		{
-			this.price = price;
-		}
 	}
 }
 
