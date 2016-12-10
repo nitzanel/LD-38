@@ -12,20 +12,16 @@ namespace AssemblyCSharp
 		/// </summary>
 		public Character ()
 		{
-			this.inventory = new Inventory ();
-			this.money = 1000;
-		
+			
 		}
 
-		/// <summary>
-		/// The inventory.
-		/// </summary>
-		public Inventory inventory;
-		/// <summary>
-		/// The money.
-		/// </summary>
-		public int money;
+		public Inventory inventory = new Inventory();
 
+		public int money;
+		public int health;
+		public int damage;
+		public int level;
+		public Weapon weapon { get; set;}
 		/// <summary>
 		/// /Takes the item.
 		/// </summary>

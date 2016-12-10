@@ -13,14 +13,11 @@ namespace AssemblyCSharp
 		/// </summary>
 		public Inventory ()
 		{
-			// the dictionary of items
-			this.items = new Dictionary<string,Item>();
-		
 		}
 		/// <summary>
 		/// The items.
 		/// </summary>
-		public Dictionary<string,Item> items;
+		public Dictionary<string,Item> items = new Dictionary<string,Item>();
 
 		/// <summary>
 		/// Adds the item to the dictionary, or increase the quantity.

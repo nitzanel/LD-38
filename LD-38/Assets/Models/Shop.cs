@@ -12,17 +12,16 @@ namespace AssemblyCSharp
 		/// </summary>
 		public Shop ()
 		{
-			this.inventory = new Inventory();
-			this.money = 1000;
+			
 		}
 		/// <summary>
 		/// The inventory.
 		/// </summary>
-		public Inventory inventory;
+		public Inventory inventory = new Inventory();
 		/// <summary>
 		/// The money.
 		/// </summary>
-		public int money;
+		public int money = 100000;
 	}
 }
 
