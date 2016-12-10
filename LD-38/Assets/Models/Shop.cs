@@ -4,11 +4,11 @@ namespace AssemblyCSharp
 {
 	public class Shop
 	{
-		public Shop (Inventory inventory)
+		public Shop ()
 		{
-			this.inv = inventory;
+			this.inventory = new Inventory();
 		}
-		private	Inventory inv;
+		public Inventory inventory;
 	}
 }
 
