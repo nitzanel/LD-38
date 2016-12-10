@@ -22,6 +22,7 @@ namespace AssemblyCSharp
 		public int damage;
 		public int level;
 		public Weapon weapon { get; set;}
+		public Vector3 position = new Vector3 (0f, 0f, 0f);
 		/// <summary>
 		/// /Takes the item.
 		/// </summary>
