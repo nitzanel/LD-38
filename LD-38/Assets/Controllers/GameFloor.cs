@@ -18,7 +18,7 @@ public class GameFloor : MonoBehaviour {
 			for (int y = 0; y < rows; y++)
 			{
 				GameObject tile_to_instantiate = tiles [Random.Range (0, tiles.Length)];
-				GameObject tile_instance = Instantiate (tile_to_instantiate, new Vector3 (x * 10.0f, y * 10.0f, 0f), Quaternion.identity) as GameObject;
+				GameObject tile_instance = Instantiate (tile_to_instantiate, new Vector3 (x / 10.0f, y / 10.0f, 0f), Quaternion.identity) as GameObject;
 				tile_instance.transform.parent = floor_holder;
 			}
 
