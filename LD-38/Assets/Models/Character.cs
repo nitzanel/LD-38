@@ -21,6 +21,7 @@ namespace AssemblyCSharp
 		public int health;
 		public int damage;
 		public int level;
+		public float speed = 2.0f;
 		public Weapon weapon { get; set;}
 		public Vector3 position = new Vector3 (0f, 0f, 0f);
 		/// <summary>

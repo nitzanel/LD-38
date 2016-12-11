@@ -7,6 +7,7 @@ namespace AssemblyCSharp
 	{
 		void updateState();
 		void OnTriggerEnter (Collider other);
+		void OnTriggerExit (Collider other);
 		void toFightState();
 		void toChaseState();
 		void toNaturalState();

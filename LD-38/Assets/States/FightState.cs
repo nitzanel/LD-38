@@ -14,7 +14,7 @@ namespace AssemblyCSharp
 		}		
 		public void updateState()	
 		{
-
+			fight ();
 		}
 		public void toFightState()	
 		{
@@ -32,11 +32,22 @@ namespace AssemblyCSharp
 		{
 
 		}
+		public void OnTriggerExit (Collider other)
+		{
 
+		}
 		public void OnTriggerEnter (Collider other)
 		{
 
 		}
+		/// <summary>
+		/// Fight this
+		/// </summary>
+		public void fight()
+		{
+			
+		}
+
 
 
 	}
