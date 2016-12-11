@@ -8,6 +8,8 @@ namespace AssemblyCSharp
 		public GameObject Player;
 		public GameObject[] enemies;
 		World world = new World();
+	
+
 		// Use this for initialization
 		void Start ()
 		{
@@ -19,10 +21,7 @@ namespace AssemblyCSharp
 		{
 		
 		}
-		public GameObject[] getEnemies()
-		{
-			return enemies;
-		}
+
 	}
 }
 
