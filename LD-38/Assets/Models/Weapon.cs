@@ -1,11 +1,11 @@
 ﻿using System;
-
+using UnityEngine;
 namespace AssemblyCSharp
 {
 	/// <summary>
 	/// Weapon.
 	/// </summary>
-	public class Weapon
+	public class Weapon 
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AssemblyCSharp.Weapon"/> class.

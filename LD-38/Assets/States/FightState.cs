@@ -34,7 +34,7 @@ namespace AssemblyCSharp
 		}
 		public void OnTriggerExit (Collider other)
 		{
-			if (other.gameObject = enemy.target)
+			if (other.gameObject == enemy.target)
 				toChaseState ();
 		}
 		public void OnTriggerEnter (Collider other)
