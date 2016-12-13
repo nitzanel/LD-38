@@ -1,11 +1,12 @@
 ﻿using System;
+using UnityEngine;
 
 namespace AssemblyCSharp
 {
 	/// <summary>
 	/// Shop.
 	/// </summary>
-	public class Shop
+	public class Shop : ScriptableObject
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AssemblyCSharp.Shop"/> class.

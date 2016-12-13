@@ -5,7 +5,7 @@ namespace AssemblyCSharp
 	/// <summary>
 	/// Weapon.
 	/// </summary>
-	public class Weapon 
+	public class Weapon : ScriptableObject
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AssemblyCSharp.Weapon"/> class.

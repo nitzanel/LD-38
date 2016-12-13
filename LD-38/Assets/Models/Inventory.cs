@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace AssemblyCSharp
 {
 	/// <summary>
 	/// Inventory.
 	/// </summary>
-	public class Inventory
+	public class Inventory : ScriptableObject
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AssemblyCSharp.Inventory"/> class.

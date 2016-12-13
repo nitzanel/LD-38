@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+
 namespace AssemblyCSharp
 {
-	public class World
+	public class World : ScriptableObject
 	{
 		public World ()
 		{

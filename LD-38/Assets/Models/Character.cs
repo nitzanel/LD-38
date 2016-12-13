@@ -1,11 +1,12 @@
 ﻿using System;
 using UnityEngine;
+
 namespace AssemblyCSharp
 {
 	/// <summary>
 	/// Character.
 	/// </summary>
-	public class Character
+	public class Character : ScriptableObject
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AssemblyCSharp.Character"/> class.
@@ -16,10 +17,9 @@ namespace AssemblyCSharp
 		}
 
 		public Inventory inventory = new Inventory();
-
+		public string name;
 		public int money;
 		public int health;
-		public int damage;
 		public int level;
 		public float speed = 2.0f;
 		public Weapon weapon { get; set;}

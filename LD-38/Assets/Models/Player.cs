@@ -5,6 +5,7 @@ namespace AssemblyCSharp
 	/// <summary>
 	/// Player.
 	/// </summary>
+	[System.Serializable]
 	public class Player : Character
 	{
 		/// <summary>
@@ -14,9 +15,8 @@ namespace AssemblyCSharp
 		{
 			this.money = money;
 			this.health = health;
-			this.damage = damage;
 			this.level = level;
-			this.weapon = new Weapon ("basic", 10);
+			this.weapon = new Weapon ("basic", damage);
 		}
 
 
