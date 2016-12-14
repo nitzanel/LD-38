@@ -6,7 +6,8 @@ namespace AssemblyCSharp
 	/// <summary>
 	/// Shop.
 	/// </summary>
-	public class Shop : ScriptableObject
+	[Serializable]
+	public class Shop 
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AssemblyCSharp.Shop"/> class.

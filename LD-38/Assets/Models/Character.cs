@@ -6,7 +6,8 @@ namespace AssemblyCSharp
 	/// <summary>
 	/// Character.
 	/// </summary>
-	public class Character : ScriptableObject
+	[Serializable]
+	public class Character 
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AssemblyCSharp.Character"/> class.

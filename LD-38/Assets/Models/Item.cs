@@ -6,7 +6,8 @@ namespace AssemblyCSharp
 	/// <summary>
 	/// Item.
 	/// </summary>
-	public class Item  : ScriptableObject
+	[Serializable]
+	public class Item  
 	{	
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AssemblyCSharp.Item"/> class.

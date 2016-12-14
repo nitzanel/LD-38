@@ -7,7 +7,8 @@ namespace AssemblyCSharp
 	/// <summary>
 	/// Inventory.
 	/// </summary>
-	public class Inventory : ScriptableObject
+	[Serializable]
+	public class Inventory 
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AssemblyCSharp.Inventory"/> class.

@@ -5,7 +5,7 @@ namespace AssemblyCSharp
 	/// <summary>
 	/// Player.
 	/// </summary>
-	[System.Serializable]
+	[Serializable]
 	public class Player : Character
 	{
 		/// <summary>

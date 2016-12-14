@@ -2,7 +2,7 @@
 
 namespace AssemblyCSharp
 {
-	[System.Serializable]
+	[Serializable]
 	public class Enemy : Character
 	{
 		public bool hostile;

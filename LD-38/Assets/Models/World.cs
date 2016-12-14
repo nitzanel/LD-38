@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace AssemblyCSharp
 {
-	public class World : ScriptableObject
+	[Serializable]
+	public class World
 	{
 		public World ()
 		{
