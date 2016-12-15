@@ -10,11 +10,16 @@ namespace AssemblyCSharp
 		public FightState(StatePatternEnemy statePatternEnemy)
 		{
 			enemy = statePatternEnemy;
+		}
 
-		}		
 		public void updateState()	
 		{
-			fight ();
+			targetAlive =  fight ();
+			if (!targetAlive)
+			{
+				enemy.target = enemy.getRandomTarget();
+				this.toChaseState();
+			}
 		}
 		public void toFightState()	
 		{
@@ -42,11 +47,12 @@ namespace AssemblyCSharp
 
 		}
 		/// <summary>
-		/// Fight this
+		/// Fight this enemy's target
 		/// </summary>
-		public void fight()
+		public bool fight()
 		{
-			
+			// Call the attack function of the enemy model againts the target model	
+			return (enemy.enemy_data.attack(enemy.target.enemy_data));		
 		}
 
 

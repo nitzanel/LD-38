@@ -61,8 +61,27 @@ namespace AssemblyCSharp
 		{
 			takeItem (giver_inventory, item.name, item.quantity);
 		}
+	
 
+		/// 
+		/// take damage
+		/// can add some damage type and do math stuff with armor and evasion and stuff
+		/// return true if not dead, else return false
+		public bool takeDamage(int damage)
+		{
+			this.health -= damage;
+			
+			if( this.health <= damage)
+				return false;
 
+			return true;
+		}
+		
+		/// attack an enemy with weapon damage
+		public bool attack(Character target)
+		{
+			return(target.takeDamage(this.weapon.damage));
+		}
 
 	}
 }
