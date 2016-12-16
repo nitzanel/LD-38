@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace AssemblyCSharp
 {
+	/// <summary>
+	/// Interact state.
+	/// </summary>
 	public class InteractState : IEnemyState
 	{
 		private readonly StatePatternEnemy enemy;

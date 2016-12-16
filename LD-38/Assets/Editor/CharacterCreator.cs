@@ -31,7 +31,7 @@ namespace AssemblyCSharp
 		void OnWizardOtherButton()
 		{
 			GameObject characterGO = createCharacter ();
-			Object prefab = PrefabUtility.CreatePrefab ("Assets/Assets/Enemies/" + characterGO.name + ".prefab", characterGO );
+			PrefabUtility.CreatePrefab ("Assets/Assets/Enemies/" + characterGO.name + ".prefab", characterGO );
 			DestroyImmediate (characterGO);
 		}
 

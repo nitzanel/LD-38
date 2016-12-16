@@ -22,7 +22,7 @@ namespace AssemblyCSharp
 		///
 		/// returns a random enemy from the world controller
 		/// the random enemy will be with different hostility then this enemy
-		GameObject getRandomEnemy()
+		public GameObject getRandomEnemy()
 		{
 			GameObject randomEnemy;
 			// POSSIBLE PROBLEM - MAY NOT EXIT IF ALL ENEMIES ARE OF SAME HOSTILITY
@@ -30,8 +30,7 @@ namespace AssemblyCSharp
 			while (true)
 			{
 				randomEnemy = worldController.enemies [Random.Range (0, worldController.enemies.Length)];
-				stateComponent = randomEnemy.GetComponent<StatePatternEnemy>();
-				if (stateComponent.isHostile != this.isHostile)
+				if (randomEnemy.GetComponent<StatePatternEnemy>().isHostile != this.isHostile)
 				{
 					return randomEnemy;
 				}

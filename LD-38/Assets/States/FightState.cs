@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace AssemblyCSharp
 {
+	/// <summary>
+	/// Fight state.
+	/// </summary>
 	public class FightState : IEnemyState
 	{
 		private readonly StatePatternEnemy enemy;
@@ -14,10 +17,10 @@ namespace AssemblyCSharp
 
 		public void updateState()	
 		{
-			targetAlive =  fight ();
+			bool targetAlive =  fight ();
 			if (!targetAlive)
 			{
-				enemy.target = enemy.getRandomTarget();
+				enemy.target = enemy.getRandomEnemy();
 				this.toChaseState();
 			}
 		}
@@ -52,7 +55,7 @@ namespace AssemblyCSharp
 		public bool fight()
 		{
 			// Call the attack function of the enemy model againts the target model	
-			return (enemy.enemy_data.attack(enemy.target.enemy_data));		
+			return (enemy.enemy_data.attack(enemy.target.GetComponent<StatePatternEnemy>().enemy_data));		
 		}
 
 

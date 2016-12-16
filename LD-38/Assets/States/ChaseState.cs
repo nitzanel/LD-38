@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace AssemblyCSharp
 {
+	/// <summary>
+	/// Chase state.
+	/// </summary>
 	public class ChaseState : IEnemyState
 	{
 		private readonly StatePatternEnemy enemy;
