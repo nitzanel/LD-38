@@ -7,7 +7,6 @@ namespace AssemblyCSharp
 	{
 		public GameObject Player;
 		public GameObject[] enemies;
-		World world = new World();
 	
 
 		// Use this for initialization

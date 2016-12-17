@@ -46,9 +46,6 @@ namespace AssemblyCSharp
 
 			characterGO.name = enemy_name;
 
-			EnemyController characterComponent = characterGO.AddComponent<EnemyController> ();
-			characterComponent.enemy = new Enemy (enemy_name, money, health, level,damage, isHostile);
-
 			SpriteRenderer spriteRenderer = characterGO.AddComponent<SpriteRenderer> ();
 			spriteRenderer.sprite = characterSprite;
 			spriteRenderer.sortingOrder = 1;
@@ -56,10 +53,10 @@ namespace AssemblyCSharp
 			Animator animator = characterGO.AddComponent<Animator> ();
 			animator.runtimeAnimatorController = animatorController;
 
-
+			characterGO.AddComponent<BoxCollider2D>();
 			StatePatternEnemy enemyAI = characterGO.AddComponent<StatePatternEnemy> ();
 			enemyAI.isHostile = isHostile;
-			enemyAI.enemy_data = characterComponent.enemy;
+			enemyAI.enemy_data = new Enemy (enemy_name, money, health, level, damage, isHostile);
 
 			return characterGO;
 		}
