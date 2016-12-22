@@ -54,7 +54,8 @@ namespace AssemblyCSharp
 			Vector3 targetPosition = enemy.target.transform.position;
 			Vector3 currentPosition = enemy.transform.position;
 			Vector3 toTarget = (targetPosition - currentPosition).normalized;
-			enemy.transform.position += toTarget * enemy.enemy_data.speed * Time.deltaTime;
+			float mods = enemy.enemy_data.speed * Time.deltaTime;
+			enemy.transform.position += toTarget * mods;
 		}
 
 

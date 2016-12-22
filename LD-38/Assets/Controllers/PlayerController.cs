@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		
 		checkForMovement()
 		checkForInteraction()
 	}
@@ -78,7 +79,9 @@ public class PlayerController : MonoBehaviour
 		movement *= mods;
 		// translate the plaer position
 		transform.Translate(movement);
-		
+
+		// update the model position.
+		player.position = transform.position;		
 	}
 }
 }

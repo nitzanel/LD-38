@@ -16,14 +16,16 @@ namespace AssemblyCSharp
 		{
 			
 		}
-
+		// Characters have inventory, hosting their items.
 		public Inventory inventory = new Inventory();
+		// some stats
 		public string name;
 		public int money;
 		public int health;
 		public int level;
 		public float speed = 2.0f;
 		public Weapon weapon { get; set;}
+		// Should the character model know its position?
 		public Vector3 position = new Vector3 (0f, 0f, 0f);
 		/// <summary>
 		/// /Takes the item.
