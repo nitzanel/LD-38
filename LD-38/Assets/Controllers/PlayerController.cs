@@ -5,7 +5,7 @@ using UnityEngine;
 namespace AssemblyCSharp
 {
 
-enum Directions {RIGHT,LEFT};
+public enum Direction {RIGHT,LEFT};
 
 public class PlayerController : MonoBehaviour 
 	{
@@ -13,23 +13,30 @@ public class PlayerController : MonoBehaviour
 	public Player player;
 	public Transform playerTransform;
 	
-	public Direction lastDirection = RIGHT;
+	public Direction lastDirection = Direction.RIGHT;
 
 
 	// Use this for initialization
 	void Start () 
 	{
-		playerTransform = GetComponenet<Transform>();
+		playerTransform = GetComponent<Transform>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
-	{
-		
-		checkForMovement()
-		checkForInteraction()
+	{	
+		checkForMovement ();
+		checkForInteraction ();
 	}
 
+
+	 
+	private void checkInput ()
+	{
+		checkForMovement ();
+		checkForInteraction ();
+		checkForAttack ();
+	}
 
 	private void checkForInteraction()
 	{
@@ -56,7 +63,7 @@ public class PlayerController : MonoBehaviour
 	private void checkForMovement()
 	{
 		// axis basesd movement
-		float verticalMovement = Input.getAxis("vertical");
+		float verticalMovement = Input.GetAxis("vertical");
 	
 		// change current facing direction - used to flip the sprite
 		if (verticalMovement == 1)
@@ -68,12 +75,12 @@ public class PlayerController : MonoBehaviour
 			lastDirection = Direction.LEFT;
 		}
 			
-		float horizontalMovement = Input.getAxis("horizontal");
+		float horizontalMovement = Input.GetAxis("horizontal");
 		
 
 
 		// normalized movement vector
-		Vector3 movement = new Vector3(verticalMovement,horizontalMovement,0.0f).normalaized;
+		Vector3 movement = new Vector3(verticalMovement,horizontalMovement,0.0f).normalized;
 		// modifications to move speed
 		float mods = player.speed * Time.deltaTime;
 		movement *= mods;
